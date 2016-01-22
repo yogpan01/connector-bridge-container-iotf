@@ -18,4 +18,4 @@ To import container image containing the connector-bridge runtime into Bluemix f
 
     Usage: ./build_connector_bridge.sh <bm user> <bm password> <space> <container namespace> <container instance name>
 
-    ubuntu% ./build_connector_bridge.sh danson@austin.rr.com myPassword dev dev connector-bridge
+    ubuntu% ./build_connector_bridge.sh myBMUsername myBMPassword dev dev connector-bridge
