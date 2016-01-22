@@ -1,4 +1,4 @@
-mbed Device Connector integration bridge image importer
+mbed Device Connector integration bridge image importer for IBM IoTF
 
 Date: January 22, 2016
 
