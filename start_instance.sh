@@ -14,20 +14,12 @@ update_hosts()
 
 run_supervisord()
 {
-   #tail -f /home/arm/mds/mds-mqtt-gateway/logs/*.log
    /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf 2>&1 1>/tmp/supervisord.log
 }
 
-run_mqtt()
+run_bridge()
 {
    cd /home/arm
-   su -l arm -s /bin/bash -c "sudo /usr/sbin/mosquitto 2>&1 1>/home/arm/mosquitto.out &"
-}
-
-run_mds()
-{
-   cd /home/arm
-   su -l arm -s /bin/bash -c "touch /home/arm/nsp.log 2>&1 1> /dev/null"
    su -l arm -s /bin/bash -c "/home/arm/restart.sh"
 }
 
@@ -41,8 +33,7 @@ main()
 {
    report_ip_address
    update_hosts
-   # run_mqtt
-   run_mds
+   run_bridge
    run_configurator
    run_supervisord
 }

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 setup_bridge() 
 {
     cd /home/arm
