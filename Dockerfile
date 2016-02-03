@@ -5,8 +5,8 @@ RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get -y update
 RUN apt-get -y install openssh-server supervisor dnsutils
-RUN echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
-RUN apt-get -y --force-yes install oracle-java7-installer
+RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
+RUN apt-get -y --force-yes install oracle-java8-installer
 RUN apt-get upgrade
 RUN apt-get -y update
 RUN apt-get -y install unzip zip
@@ -17,9 +17,9 @@ EXPOSE 28520/tcp
 RUN useradd arm -m -s /bin/bash 
 RUN mkdir -p /home/arm
 RUN chown arm.arm /home/arm
-COPY mds-server.zip /home/arm/
+COPY connector-bridge.zip /home/arm/
 COPY configurator-1.0.zip /home/arm/
-RUN chmod 755 /home/arm/mds-server.zip
+RUN chmod 755 /home/arm/connector-bridge.zip
 RUN chmod 755 /home/arm/configurator-1.0.zip
 COPY ssh-keys.tar /home/arm/
 RUN chmod 755 /home/arm/ssh-keys.tar
