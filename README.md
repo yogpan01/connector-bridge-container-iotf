@@ -12,6 +12,8 @@ Prerequisites (Ubuntu 14.04 LTS only):
 - IBM Cloud Foundary utilities installed
 - Docker installed
 
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ARMmbed/connector-bridge-container-iotf.git)
+
 To import container image containing the connector-bridge runtime into Bluemix for instantiation:
 
     ubuntu% ./build_connector_bridge.sh
