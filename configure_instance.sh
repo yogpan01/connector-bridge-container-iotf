@@ -52,7 +52,8 @@ setup_sudoers()
 }
 
 setup_java() {
-    update-alternatives --set java /usr/lib/jvm/java-8-oracle/jre/bin/java
+    # update-alternatives --set java /usr/lib/jvm/java-8-oracle/jre/bin/java
+    update-alternatives --set java /usr/lib/jvm/java-7-oracle/jre/bin/java
 }
 
 cleanup()
