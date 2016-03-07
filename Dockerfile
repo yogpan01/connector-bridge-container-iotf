@@ -3,7 +3,6 @@ MAINTAINER ARM <doug.anson@arm.com>
 RUN apt-get update
 RUN apt-get -y install software-properties-common
 RUN apt-get -y install openjdk-7-jre openssh-server supervisor dnsutils
-RUN apt-get -y --force-yes install oracle-java7-installer
 RUN apt-get -y install unzip zip
 EXPOSE 22/tcp
 EXPOSE 8234/tcp
