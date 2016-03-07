@@ -1,14 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER ARM <doug.anson@arm.com>
-RUN apt-get update && apt-get -y upgrade
 RUN apt-get -y install software-properties-common
-RUN add-apt-repository ppa:webupd8team/java
-RUN apt-get -y update
 RUN apt-get -y install openssh-server supervisor dnsutils
-RUN echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
-RUN apt-get -y --force-yes install oracle-java7-installer
-RUN apt-get upgrade
-RUN apt-get -y update
+RUN apt-get -y install openjdk-7-jre
 RUN apt-get -y install unzip zip
 EXPOSE 22/tcp
 EXPOSE 8234/tcp
