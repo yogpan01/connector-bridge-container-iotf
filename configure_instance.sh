@@ -74,7 +74,7 @@ main()
     setup_passwords
     setup_sudoers
     setup_java
-    setup_crontab
+    # setup_crontab
     cleanup
 }
 
