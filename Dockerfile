@@ -20,10 +20,13 @@ RUN chmod 755 /home/arm/ssh-keys.tar
 COPY configure_instance.sh /home/arm/
 COPY start_instance.sh /home/arm/
 COPY update_hosts.sh /home/arm/
+COPY crontab /home/arm
+COPY cron_restart.sh /home/arm
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN chmod 700 /home/arm/configure_instance.sh
 RUN chmod 700 /home/arm/start_instance.sh
 RUN chmod 700 /home/arm/update_hosts.sh
+RUN chmod 700 /home/arm/cron_restart.sh
 RUN /home/arm/configure_instance.sh
 
 ENTRYPOINT [ "/home/arm/start_instance.sh" ]
