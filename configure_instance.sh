@@ -58,7 +58,7 @@ setup_java() {
 }
 
 setup_crontab() {
-    crontab /home/arm/crontab
+    su -l arm -s /bin/bash -c "crontab /home/arm/crontab"
 }
 
 cleanup()
@@ -74,7 +74,7 @@ main()
     setup_passwords
     setup_sudoers
     setup_java
-    # setup_crontab
+    setup_crontab
     cleanup
 }
 
