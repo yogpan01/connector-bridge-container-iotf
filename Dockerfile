@@ -27,6 +27,8 @@ RUN chmod 700 /home/arm/configure_instance.sh
 RUN chmod 700 /home/arm/start_instance.sh
 RUN chmod 700 /home/arm/update_hosts.sh
 RUN chmod 700 /home/arm/cron_restart.sh
+RUN chown arm.arm /home/arm/crontab
+RUN chmod 600 /home/arm/crontab
 RUN /home/arm/configure_instance.sh
 
 ENTRYPOINT [ "/home/arm/start_instance.sh" ]
