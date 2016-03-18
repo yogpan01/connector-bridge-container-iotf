@@ -57,7 +57,7 @@ stages:
   - type: stage
   properties:
   - name: CONTAINER_SIZE
-    value: small
+    value: tiny
     type: text
   jobs:
   - name: Deploy
